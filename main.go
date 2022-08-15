@@ -6,7 +6,6 @@ import (
 )
 
 func main() {
-
 	app := fiber.New()
 	routers.ConfigureRouters(app)
 	app.Listen(":3000")

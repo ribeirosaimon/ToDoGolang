@@ -1,0 +1,18 @@
+version: "3"
+
+services:
+  api:
+    build:
+      context: .
+    ports:
+      - "3000:3000"
+
+  mongo:
+    image: 'mongo:3.4.1'
+    ports:
+      - '7017:7017'
+    volumes:
+      - 'mongo:/data/db'
+
+volumes:
+  mongo:
