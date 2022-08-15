@@ -2,4 +2,4 @@
 First To Do Golang
 
 
-docker-compose up
+```docker-compose up```
