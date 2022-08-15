@@ -1,9 +1,9 @@
 package services
 
 import (
-	"learnGo/src/payloads"
-	"learnGo/src/repository"
-	"learnGo/src/response"
+	"ToDoGolang/src/payloads"
+	"ToDoGolang/src/repository"
+	"ToDoGolang/src/response"
 	"net/http"
 )
 

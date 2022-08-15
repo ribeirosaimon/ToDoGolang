@@ -1,7 +1,7 @@
 package routers
 
 import (
-	"learnGo/src/controllers"
+	"ToDoGolang/src/controllers"
 	"net/http"
 )
 

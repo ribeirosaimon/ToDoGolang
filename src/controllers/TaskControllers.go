@@ -1,11 +1,11 @@
 package controllers
 
 import (
+	"ToDoGolang/src/payloads"
+	"ToDoGolang/src/response"
+	"ToDoGolang/src/services"
 	"fmt"
 	"github.com/gofiber/fiber/v2"
-	"learnGo/src/payloads"
-	"learnGo/src/response"
-	"learnGo/src/services"
 	"net/http"
 )
 
