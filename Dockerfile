@@ -1,13 +1,13 @@
-FROM golang
+FROM golang as builder
 
-ENV GO111MODULE=on
-
-WORKDIR /app
-
-COPY . .
-
-RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build
-
+WORKDIR /build/api
+COPY go.mod ./
+RUN go mod download
+COPY . ./
+RUN CGO_ENABLED=0 go build -o api
+# post build stage
+FROM alpine
+WORKDIR /root
+COPY --from=builder /build/api/api .
 EXPOSE 3000
-
-ENTRYPOINT ["/app/learnGo"]
+CMD ["./api"]

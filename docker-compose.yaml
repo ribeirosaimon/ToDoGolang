@@ -5,14 +5,17 @@ services:
     build:
       context: .
     ports:
-      - "3000:3000"
+      - "4000:4000"
+    depends_on:
+      - mongodb
 
-  mongo:
-    image: 'mongo:3.4.1'
+  mongodb:
+    image: mongo
     ports:
       - '7017:7017'
     volumes:
-      - 'mongo:/data/db'
+      - "mongodb:/data/db"
+
 
 volumes:
-  mongo:
+  mongodb:
